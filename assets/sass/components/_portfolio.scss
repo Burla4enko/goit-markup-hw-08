@@ -1,9 +1,22 @@
 .portfolio__nav {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: -8px;
     margin-bottom: 50px;
+
+    @media (max-width: 767px) {
+        margin-top: -15px;
+    }
+
+    @media (min-width: 768px) {
+        justify-content: center;
+    }
 }
 
-.portfolio__nav-item + .portfolio__nav-item {
+.portfolio__nav-item {
     margin-left: 8px;
+
+    @media (max-width: 767px) {
+        margin-top: 15px;
+    }
 }

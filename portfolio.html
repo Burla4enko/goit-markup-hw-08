@@ -21,12 +21,29 @@
           >Web<span class="logo--header">Studio</span></a
         >
 
+        <button class="btn-burger" type="button" data-menu-button>
+          <svg
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
+          >
+            <use
+              class="btn-burger__icon-burger"
+              href="./assets/image/svg/symbol-defs.svg#menu-burger"
+            ></use>
+            <use
+              class="btn-burger__icon-cross"
+              href="./assets/image/svg/symbol-defs.svg#menu-cross"
+            ></use>
+          </svg>
+        </button>
+
         <ul class="nav">
           <li class="nav__item">
-            <a class="nav__link" href="./index.html">Студия</a>
+            <a class="nav__link active" href="./index.html">Студия</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link active" href="./portfolio.html">Портфолио</a>
+            <a class="nav__link" href="./portfolio.html">Портфолио</a>
           </li>
           <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
         </ul>
@@ -90,7 +107,7 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-1.jpg"
+                    src="./assets/image/portfolio/portfolio-work-1-450w.jpg"
                     alt="Веб-сайт: Технокряк"
                   />
                 </div>
@@ -115,9 +132,8 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-2.jpg"
+                    src="./assets/image/portfolio/portfolio-work-2-450w.jpg"
                     alt="Дизайн: Постер Новый Орлеан против Золотой Звезды"
-                    width="370"
                   />
                 </div>
                 <div class="works__content">
@@ -141,9 +157,8 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-3.jpg"
+                    src="./assets/image/portfolio/portfolio-work-3-450w.jpg"
                     alt="Приложение: Ресторан МорскаяЕда"
-                    width="370"
                   />
                 </div>
                 <div class="works__content">
@@ -167,9 +182,8 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-4.jpg"
+                    src="./assets/image/portfolio/portfolio-work-4-450w.jpg"
                     alt="Маркетинг: Проект Основной"
-                    width="370"
                   />
                 </div>
                 <div class="works__content">
@@ -193,9 +207,8 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-5.jpg"
+                    src="./assets/image/portfolio/portfolio-work-5-450w.jpg"
                     alt="Приложение: Проект Коробки"
-                    width="370"
                   />
                 </div>
                 <div class="works__content">
@@ -219,9 +232,8 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-6.jpg"
+                    src="./assets/image/portfolio/portfolio-work-6-450w.jpg"
                     alt="Веб-сайт: Вдохновение не имеет границ"
-                    width="370"
                   />
                 </div>
                 <div class="works__content">
@@ -245,9 +257,8 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-7.jpg"
+                    src="./assets/image/portfolio/portfolio-work-7-450w.jpg"
                     alt="Дизайн: Издание Ограниченный выпуск"
-                    width="370"
                   />
                 </div>
                 <div class="works__content">
@@ -271,9 +282,8 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-8.jpg"
+                    src="./assets/image/portfolio/portfolio-work-8-450w.jpg"
                     alt="Маркетинг: Проект ЛАБ"
-                    width="370"
                   />
                 </div>
                 <div class="works__content">
@@ -297,9 +307,8 @@
                   </p>
                   <img
                     class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-9.jpg"
+                    src="./assets/image/portfolio/portfolio-work-9-450w.jpg"
                     alt="Приложение: Растущий бизнес"
-                    width="370"
                   />
                 </div>
                 <div class="works__content">
@@ -395,14 +404,16 @@
         <div class="footer__block">
           <b class="footer__social-title">Подпишитесь на рассылку</b>
           <form class="form-subscribe">
-            <input
-              class="form-subscribe__input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder=" "
-            />
-            <label class="form-subscribe__label" for="email">E-mail</label>
+            <div class="form-subscribe__thumb">
+              <input
+                class="form-subscribe__input"
+                type="email"
+                name="email"
+                id="email"
+                placeholder=" "
+              />
+              <label class="form-subscribe__label" for="email">E-mail</label>
+            </div>
             <button class="btn btn--with-icon" type="submit">
               Подписаться
               <svg class="btn__icon btn__icon--end" width="24" height="24">

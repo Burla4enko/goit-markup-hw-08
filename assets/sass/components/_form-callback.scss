@@ -39,7 +39,7 @@
 
     transition: outline $transition-prop;
 
-    &:focus-visible,
+    &:focus,
     &:hover {
         outline: 1px solid $accent-color;
     }
@@ -87,10 +87,19 @@
     display: flex;
     align-items: center;
 
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: #757575;
+
+    @media (max-width: 449px) {
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .form-callback__checkbox-icon {
@@ -101,7 +110,7 @@
     border-radius: 3px;
     fill: none;
 
-    transition: all $transition-prop;
+    transition: all 0.2s ease;
 
     .form-callback__checkbox:checked + & {
         background-color: $accent-color;
@@ -109,14 +118,34 @@
         border-radius: 3px;
         fill: #ffffff;
     }
+
+    .form-callback__checkbox:focus + & {
+        background-color: transparent;
+        outline: 2px solid $accent-color;
+    }
+
+    .form-callback__checkbox:checked:focus + & {
+        background-color: $accent-color;
+        outline: 2px solid black;
+    }
 }
 
 .form-callback__link {
     margin-left: 5px;
 
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     color: $accent-color;
+
+    @media (max-width: 449px) {
+        margin-left: 24px;
+        line-height: 2;
+    }
+
+    @media (min-width: 1200px) {
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
