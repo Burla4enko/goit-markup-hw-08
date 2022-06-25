@@ -1,0 +1,91 @@
+.skills {
+    @media (max-width: 1199px) {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    @media (min-width: 1200px) {
+        padding-top: 94px;
+    }
+}
+
+.skills__list {
+    @media (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 768px) {
+        margin: -15px;
+    }
+}
+
+.skills__item {
+    &::before {
+        display: block;
+        content: "";
+        height: 120px;
+        margin-bottom: 30px;
+
+        background-color: $light-bg-color;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        border-radius: 4px;
+    }
+
+    &:nth-child(1)::before {
+        background-image: url(../image/svg/skills/antenna.svg);
+    }
+
+    &:nth-child(2)::before {
+        background-image: url(../image/svg/skills/clock.svg);
+    }
+
+    &:nth-child(3)::before {
+        background-image: url(../image/svg/skills/diagram.svg);
+    }
+
+    &:nth-child(4)::before {
+        background-image: url(../image/svg/skills/astronaut.svg);
+    }
+
+    @media (max-width: 767px) {
+        width: 100%;
+
+        &:not(:first-child) {
+            margin-top: 30px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        margin: 15px;
+        width: calc((100% - 60px) / 2);
+    }
+
+    @media (min-width: 1200px) {
+        margin: 15px;
+        width: calc((100% - 120px) / 4);
+    }
+}
+
+.skills__title {
+    @media (max-width: 767px) {
+        text-align: center;
+    }
+
+    margin-bottom: 10px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $text-color-main;
+}
+
+.skills__text {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $text-color-accent;
+}

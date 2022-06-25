@@ -1,0 +1,60 @@
+body {
+    font-family: $font-main, sans-serif;
+    font-size: $font-size;
+    color: $text-color-main;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.container {
+    display: block;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    @media (max-width: 767px) {
+        max-width: 767px;
+        min-height: 60px;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        max-width: 1199px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 1200px;
+    }
+}

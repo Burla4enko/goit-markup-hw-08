@@ -1,0 +1,122 @@
+.form-callback {
+    text-align: center;
+}
+
+.form-callback__field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+
+    &:last-child {
+        margin-bottom: 20px;
+    }
+}
+
+.form-callback__label {
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $text-color-accent;
+
+    & span {
+        display: block;
+        margin-top: 4px;
+
+        position: relative;
+    }
+}
+
+.form-callback__input {
+    width: 100%;
+    height: 40px;
+    padding-left: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    transition: outline $transition-prop;
+
+    &:focus-visible,
+    &:hover {
+        outline: 1px solid $accent-color;
+    }
+}
+
+.form-callback__icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    transition: fill $transition-prop;
+
+    .form-callback__label:focus-within &,
+    .form-callback__label:hover & {
+        fill: $accent-color;
+    }
+}
+
+.form-callback__textarea {
+    margin-top: 4px;
+    padding: 12px 16px;
+    height: 120px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    resize: none;
+
+    transition: outline $transition-prop;
+
+    &:focus-visible,
+    &:hover {
+        outline: 1px solid $accent-color;
+    }
+}
+
+.form-callback__agreement {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.form-callback__chbox-label {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+}
+
+.form-callback__checkbox-icon {
+    margin-right: 8px;
+
+    background-color: #ffffff;
+    border: 2px solid $text-color-main;
+    border-radius: 3px;
+    fill: none;
+
+    transition: all $transition-prop;
+
+    .form-callback__checkbox:checked + & {
+        background-color: $accent-color;
+        border: transparent;
+        border-radius: 3px;
+        fill: #ffffff;
+    }
+}
+
+.form-callback__link {
+    margin-left: 5px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: $accent-color;
+}

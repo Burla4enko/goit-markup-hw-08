@@ -1,0 +1,33 @@
+.logo {
+    font-family: $font-accent;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    color: $accent-color;
+
+    @media (max-width: 767px) {
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    @media (max-width: 1199px) {
+        font-size: 24px;
+        line-height: 1.17;
+    }
+
+    @media (min-width: 1200px) {
+        margin-right: 93px;
+
+        font-size: 26px;
+        line-height: 1.19;
+    }
+}
+
+.logo--header {
+    color: #000000;
+}
+
+.logo--footer {
+    color: #ffffff;
+}
