@@ -72,9 +72,11 @@
     border: 0;
     background-color: transparent;
 
-    & svg {
-        margin-right: 15px;
-    }
+    z-index: 2;
+
+    // & svg {
+    //     margin-right: 15px;
+    // }
 
     @media (max-width: 767px) {
         display: inline-flex;
