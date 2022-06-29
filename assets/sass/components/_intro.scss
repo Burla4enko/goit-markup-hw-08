@@ -1,8 +1,8 @@
 .intro {
     width: 100%;
-    max-width: 1600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+    max-width: 480px;
+    padding-top: 118px;
+    padding-bottom: 118px;
     margin: 0 auto;
 
     background-color: $bg-color;
@@ -10,12 +10,34 @@
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)
         ),
-        url(../image/intro/intro-bg-1600w.jpg);
+        url(../image/intro/intro-bg-480w.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
     text-align: center;
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+        max-width: 768px;
+
+        background-image: linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url(../image/intro/intro-bg-768w.jpg);
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1600px;
+        padding-top: 200px;
+        padding-bottom: 200px;
+
+        background-image: linear-gradient(
+                rgba(47, 48, 58, 0.4),
+                rgba(47, 48, 58, 0.4)
+            ),
+            url(../image/intro/intro-bg-1600w.jpg);
+    }
 }
 
 .intro__title {
@@ -38,5 +60,39 @@
         max-width: 700px;
         font-size: 44px;
         line-height: 1.36;
+    }
+}
+
+@media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    @media (max-width: 767px) {
+        .intro {
+            background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url(../image/intro/intro-bg-480w@2.jpg);
+        }
+    }
+
+    @media (max-width: 1199px) {
+        .intro {
+            background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url(../image/intro/intro-bg-768w@2.jpg);
+        }
+    }
+
+    @media (min-width: 1200px) {
+        .intro {
+            background-image: linear-gradient(
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)
+                ),
+                url(../image/intro/intro-bg-1600w@2.jpg);
+        }
     }
 }

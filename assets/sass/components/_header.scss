@@ -14,22 +14,31 @@
 }
 
 .header__menu-container {
-    display: none;
     background-color: #fff;
+
+    transition: transform $transition-prop, opacity $transition-prop;
 
     @media (max-width: 767px) {
         height: 100vh;
+        padding: 48px 40px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transform: translateX(-100%);
 
         &.is-open {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
             width: 100%;
-            padding: 48px 40px;
 
             position: absolute;
             top: 0;
             left: 0;
+            z-index: 1;
+            opacity: 1;
+            transform: translatex(0);
         }
     }
 
@@ -51,6 +60,10 @@
     flex-direction: column-reverse;
     justify-content: center;
 
+    @media (max-width: 767px) {
+        margin-top: auto;
+    }
+
     @media (min-width: 768px) {
         flex-direction: column;
     }
@@ -61,6 +74,10 @@
 }
 
 .header__contacts-item + .header__contacts-item {
+    @media (max-width: 768px) {
+        margin-bottom: 32px;
+    }
+
     @media (min-width: 768px) and (max-width: 1199px) {
         margin-top: 10px;
     }
@@ -75,13 +92,25 @@
     align-items: center;
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     color: $text-color-accent;
     text-decoration: none;
 
     transition: color $transition-prop;
+
+    @media (min-width: 450px) and (max-width: 767px) {
+        &[href*="tel"] {
+            font-size: 34px;
+            line-height: 1.18;
+        }
+    }
+
+    @media (min-width: 768px) {
+        font-size: 14px;
+        line-height: 1.14;
+    }
 
     &:hover,
     &:focus {
@@ -96,5 +125,45 @@
 
     @media (max-width: 767px) {
         display: none;
+    }
+}
+
+.header__social-menu {
+    display: flex;
+    margin-top: 64px;
+
+    @media (max-width: 450px) {
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 768px) {
+        display: none;
+    }
+}
+
+.header__social-item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.header__social-link {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: $accent-color;
+
+    text-decoration: underline 1px transparent;
+    transition: text-decoration-color $transition-prop, color $transition-prop;
+
+    &:hover,
+    &:focus {
+        text-decoration-color: $accent-color-dark;
+        color: $accent-color-dark;
     }
 }

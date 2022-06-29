@@ -74,7 +74,23 @@
               >
             </li>
           </ul>
+
+          <ul class="header__social-menu">
+            <li class="header__social-item">
+              <a href="" class="header__social-link">Instagram</a>
+            </li>
+            <li class="header__social-item">
+              <a href="" class="header__social-link">Twitter</a>
+            </li>
+            <li class="header__social-item">
+              <a href="" class="header__social-link">Facebook</a>
+            </li>
+            <li class="header__social-item">
+              <a href="" class="header__social-link">LinkedIn</a>
+            </li>
+          </ul>
         </div>
+        <!--/.header__menu-container-->
       </nav>
     </header>
 
@@ -127,27 +143,72 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="wedo__list">
             <li class="wedo__item">
-              <img
-                class="wedo__image"
-                src="./assets/image/about/about-1.jpg"
-                alt="Рабочее пространство"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/image/wedo/about-1-370w.webp   1x,
+                    ./assets/image/wedo/about-1-370w@2.webp 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./assets/image/wedo/about-1-370w.jpg   1x,
+                    ./assets/image/wedo/about-1-370w@2.jpg 2x
+                  "
+                />
+                <img
+                  class="wedo__image"
+                  src="./assets/image/wedo/about-1-370w.jpg"
+                  alt="Рабочее пространство"
+                />
+              </picture>
               <p class="wedo__description">Десктопные приложения</p>
             </li>
             <li class="wedo__item">
-              <img
-                class="wedo__image"
-                src="./assets/image/about/about-2.jpg"
-                alt="Адаптация: ноутбук, телефон"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/image/wedo/about-2-370w.webp   1x,
+                    ./assets/image/wedo/about-2-370w@2.webp 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./assets/image/wedo/about-2-370w.jpg   1x,
+                    ./assets/image/wedo/about-2-370w@2.jpg 2x
+                  "
+                />
+                <img
+                  class="wedo__image"
+                  src="./assets/image/wedo/about-2-370w.jpg"
+                  alt="Адаптация: ноутбук, телефон"
+                />
+              </picture>
               <p class="wedo__description">Мобильные приложения</p>
             </li>
             <li class="wedo__item">
-              <img
-                class="wedo__image"
-                src="./assets/image/about/about-3.jpg"
-                alt="Дизайн: цветовая палитра"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  srcset="
+                    ./assets/image/wedo/about-3-370w.webp   1x,
+                    ./assets/image/wedo/about-3-370w@2.webp 2x
+                  "
+                />
+                <source
+                  srcset="
+                    ./assets/image/wedo/about-3-370w.jpg   1x,
+                    ./assets/image/wedo/about-3-370w@2.jpg 2x
+                  "
+                />
+                <img
+                  class="wedo__image"
+                  src="./assets/image/wedo/about-3-370w.jpg"
+                  alt="Дизайн: цветовая палитра"
+                />
+              </picture>
               <p class="wedo__description">Дизайнерские решения</p>
             </li>
           </ul>
@@ -159,11 +220,59 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                class="team__photo"
-                src="./assets/image/team/team-member-1-450w.jpg"
-                alt="Фото: Игорь Демьяненко"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./assets/image/team/team-member-1-450w.webp   1x,
+                    ./assets/image/team/team-member-1-450w@2.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./assets/image/team/team-member-1-354w.webp   1x,
+                    ./assets/image/team/team-member-1-354w@2.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./assets/image/team/team-member-1-270w.webp   1x,
+                    ./assets/image/team/team-member-1-270w@2.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./assets/image/team/team-member-1-450w.jpg   1x,
+                    ./assets/image/team/team-member-1-450w@2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./assets/image/team/team-member-1-354w.jpg   1x,
+                    ./assets/image/team/team-member-1-354w@2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./assets/image/team/team-member-1-270w.jpg   1x,
+                    ./assets/image/team/team-member-1-270w@2.jpg 2x
+                  "
+                />
+                <img
+                  class="team__photo"
+                  src="./assets/image/team/team-member-1-450w.jpg"
+                  alt="Фото: Игорь Демьяненко"
+                />
+              </picture>
+
               <p class="team__pers">Игорь Демьяненко</p>
               <p class="team__prof">Product Designer</p>
               <ul class="social">
@@ -225,12 +334,60 @@
                 </li>
               </ul>
             </li>
+
             <li class="team__item">
-              <img
-                class="team__photo"
-                src="./assets/image/team/team-member-2-450w.jpg"
-                alt="Фото: Ольга Репина"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./assets/image/team/team-member-2-450w.webp   1x,
+                    ./assets/image/team/team-member-2-450w@2.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./assets/image/team/team-member-2-354w.webp   1x,
+                    ./assets/image/team/team-member-2-354w@2.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./assets/image/team/team-member-2-270w.webp   1x,
+                    ./assets/image/team/team-member-2-270w@2.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./assets/image/team/team-member-2-450w.jpg   1x,
+                    ./assets/image/team/team-member-2-450w@2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./assets/image/team/team-member-2-354w.jpg   1x,
+                    ./assets/image/team/team-member-2-354w@2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./assets/image/team/team-member-2-270w.jpg   1x,
+                    ./assets/image/team/team-member-2-270w@2.jpg 2x
+                  "
+                />
+                <img
+                  class="team__photo"
+                  src="./assets/image/team/team-member-2-450w.jpg"
+                  alt="Фото: Ольга Репина"
+                />
+              </picture>
               <p class="team__pers">Ольга Репина</p>
               <p class="team__prof">Frontend Developer</p>
               <ul class="social">
@@ -292,12 +449,60 @@
                 </li>
               </ul>
             </li>
+
             <li class="team__item">
-              <img
-                class="team__photo"
-                src="./assets/image/team/team-member-3-450w.jpg"
-                alt="Фото: Николай Тарасов"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./assets/image/team/team-member-3-450w.webp   1x,
+                    ./assets/image/team/team-member-3-450w@2.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./assets/image/team/team-member-3-354w.webp   1x,
+                    ./assets/image/team/team-member-3-354w@2.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./assets/image/team/team-member-3-270w.webp   1x,
+                    ./assets/image/team/team-member-3-270w@2.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./assets/image/team/team-member-3-450w.jpg   1x,
+                    ./assets/image/team/team-member-3-450w@2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./assets/image/team/team-member-3-354w.jpg   1x,
+                    ./assets/image/team/team-member-3-354w@2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./assets/image/team/team-member-3-270w.jpg   1x,
+                    ./assets/image/team/team-member-3-270w@2.jpg 2x
+                  "
+                />
+                <img
+                  class="team__photo"
+                  src="./assets/image/team/team-member-3-450w.jpg"
+                  alt="Фото: Николай Тарасов"
+                />
+              </picture>
               <p class="team__pers">Николай Тарасов</p>
               <p class="team__prof">Marketing</p>
               <ul class="social">
@@ -359,12 +564,60 @@
                 </li>
               </ul>
             </li>
+
             <li class="team__item">
-              <img
-                class="team__photo"
-                src="./assets/image/team/team-member-4-450w.jpg"
-                alt="Фото: Михаил Ермаков"
-              />
+              <picture>
+                <source
+                  type="image/webp"
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./assets/image/team/team-member-4-450w.webp   1x,
+                    ./assets/image/team/team-member-4-450w@2.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./assets/image/team/team-member-4-354w.webp   1x,
+                    ./assets/image/team/team-member-4-354w@2.webp 2x
+                  "
+                />
+                <source
+                  type="image/webp"
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./assets/image/team/team-member-4-270w.webp   1x,
+                    ./assets/image/team/team-member-4-270w@2.webp 2x
+                  "
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./assets/image/team/team-member-4-450w.jpg   1x,
+                    ./assets/image/team/team-member-4-450w@2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  srcset="
+                    ./assets/image/team/team-member-4-354w.jpg   1x,
+                    ./assets/image/team/team-member-4-354w@2.jpg 2x
+                  "
+                />
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./assets/image/team/team-member-4-270w.jpg   1x,
+                    ./assets/image/team/team-member-4-270w@2.jpg 2x
+                  "
+                />
+                <img
+                  class="team__photo"
+                  src="./assets/image/team/team-member-4-450w.jpg"
+                  alt="Фото: Михаил Ермаков"
+                />
+              </picture>
               <p class="team__pers">Михаил Ермаков</p>
               <p class="team__prof">UI Designer</p>
               <ul class="social">

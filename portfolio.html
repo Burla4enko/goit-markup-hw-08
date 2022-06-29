@@ -21,7 +21,12 @@
           >Web<span class="logo--header">Studio</span></a
         >
 
-        <button class="btn-burger" type="button" data-menu-button>
+        <button
+          class="btn-burger"
+          type="button"
+          aria-expanded="false"
+          data-menu-button
+        >
           <svg
             width="40"
             height="40"
@@ -38,34 +43,53 @@
           </svg>
         </button>
 
-        <ul class="nav">
-          <li class="nav__item">
-            <a class="nav__link active" href="./index.html">Студия</a>
-          </li>
-          <li class="nav__item">
-            <a class="nav__link" href="./portfolio.html">Портфолио</a>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
-        </ul>
+        <div class="header__menu-container" data-menu>
+          <ul class="nav">
+            <li class="nav__item">
+              <a class="nav__link" href="./index.html">Студия</a>
+            </li>
+            <li class="nav__item">
+              <a class="nav__link active" href="./portfolio.html">Портфолио</a>
+            </li>
+            <li class="nav__item"><a class="nav__link" href="">Контакты</a></li>
+          </ul>
 
-        <ul class="header__contacts">
-          <li class="header__contacts-item">
-            <a class="header__contacts-link" href="mailto:info@devstudio.com">
-              <svg class="header__contacts-icon" width="16" height="12">
-                <use href="./assets/image/svg/symbol-defs.svg#email"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
-          <li class="header__contacts-item">
-            <a class="header__contacts-link" href="tel:+380961111111">
-              <svg class="header__contacts-icon" width="10" height="16">
-                <use href="./assets/image/svg/symbol-defs.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+          <ul class="header__contacts">
+            <li class="header__contacts-item">
+              <a class="header__contacts-link" href="mailto:info@devstudio.com">
+                <svg class="header__contacts-icon" width="16" height="12">
+                  <use href="./assets/image/svg/symbol-defs.svg#email"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="header__contacts-item">
+              <a class="header__contacts-link" href="tel:+380961111111">
+                <svg class="header__contacts-icon" width="10" height="16">
+                  <use
+                    href="./assets/image/svg/symbol-defs.svg#smartphone"
+                  ></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
+            </li>
+          </ul>
+
+          <ul class="header__social-menu">
+            <li class="header__social-item">
+              <a href="" class="header__social-link">Instagram</a>
+            </li>
+            <li class="header__social-item">
+              <a href="" class="header__social-link">Twitter</a>
+            </li>
+            <li class="header__social-item">
+              <a href="" class="header__social-link">Facebook</a>
+            </li>
+            <li class="header__social-item">
+              <a href="" class="header__social-link">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </nav>
     </header>
 
@@ -105,11 +129,58 @@
                     функционала и сервисов. Все это позволит посетителю получить
                     исчерпывающие сведения о компании или частном лице.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-1-450w.jpg"
-                    alt="Веб-сайт: Технокряк"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-1-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-1-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-1-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-1-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-1-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-1-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-1-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-1-450w.jpg"
+                      alt="Веб-сайт: Технокряк"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Технокряк</h3>
@@ -130,11 +201,58 @@
                     согласных живут рыбные тексты. Гор которой ведущими силуэт
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-2-450w.jpg"
-                    alt="Дизайн: Постер Новый Орлеан против Золотой Звезды"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-2-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-2-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-2-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-2-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-2-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-2-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-2-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-2-450w.jpg"
+                      alt="Дизайн: Постер Новый Орлеан против Золотой Звезды"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Постер New Orlean vs Golden Star</h3>
@@ -155,11 +273,58 @@
                     согласных живут рыбные тексты. Гор которой ведущими силуэт
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-3-450w.jpg"
-                    alt="Приложение: Ресторан МорскаяЕда"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-3-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-3-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-3-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-3-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-3-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-3-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-3-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-3-450w.jpg"
+                      alt="Приложение: Ресторан МорскаяЕда"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Ресторан Seafood</h3>
@@ -180,11 +345,58 @@
                     согласных живут рыбные тексты. Гор которой ведущими силуэт
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-4-450w.jpg"
-                    alt="Маркетинг: Проект Основной"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-4-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-4-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-4-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-4-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-4-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-4-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-4-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-4-450w.jpg"
+                      alt="Маркетинг: Проект Основной"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Проект Prime</h3>
@@ -205,11 +417,58 @@
                     согласных живут рыбные тексты. Гор которой ведущими силуэт
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-5-450w.jpg"
-                    alt="Приложение: Проект Коробки"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-5-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-5-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-5-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-5-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-5-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-5-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-5-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-5-450w.jpg"
+                      alt="Приложение: Проект Коробки"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Проект Boxes</h3>
@@ -230,11 +489,58 @@
                     согласных живут рыбные тексты. Гор которой ведущими силуэт
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-6-450w.jpg"
-                    alt="Веб-сайт: Вдохновение не имеет границ"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-6-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-6-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-6-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-6-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-6-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-6-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-6-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-6-450w.jpg"
+                      alt="Веб-сайт: Вдохновение не имеет границ"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Inspiration has no Borders</h3>
@@ -255,11 +561,58 @@
                     согласных живут рыбные тексты. Гор которой ведущими силуэт
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-7-450w.jpg"
-                    alt="Дизайн: Издание Ограниченный выпуск"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-7-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-7-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-7-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-7-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-7-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-7-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-7-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-7-450w.jpg"
+                      alt="Дизайн: Издание Ограниченный выпуск"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Издание Limited Edition</h3>
@@ -280,11 +633,58 @@
                     согласных живут рыбные тексты. Гор которой ведущими силуэт
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-8-450w.jpg"
-                    alt="Маркетинг: Проект ЛАБ"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-8-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-8-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-8-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-8-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-8-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-8-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-8-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-8-450w.jpg"
+                      alt="Маркетинг: Проект ЛАБ"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Проект LAB</h3>
@@ -305,11 +705,58 @@
                     согласных живут рыбные тексты. Гор которой ведущими силуэт
                     образ агентство пор. Сих, власти возвращайся.
                   </p>
-                  <img
-                    class="works__image"
-                    src="./assets/image/portfolio/portfolio-work-9-450w.jpg"
-                    alt="Приложение: Растущий бизнес"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-450w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-9-450w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-354w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-9-354w@2.webp 2x
+                      "
+                    />
+                    <source
+                      type="image/webp"
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-370w.webp   1x,
+                        ./assets/image/portfolio/portfolio-work-9-370w@2.webp 2x
+                      "
+                    />
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-450w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-9-450w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-354w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-9-354w@2.jpg 2x
+                      "
+                    />
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./assets/image/portfolio/portfolio-work-9-370w.jpg   1x,
+                        ./assets/image/portfolio/portfolio-work-9-370w@2.jpg 2x
+                      "
+                    />
+                    <img
+                      class="works__image"
+                      src="./assets/image/portfolio/portfolio-work-9-450w.jpg"
+                      alt="Приложение: Растущий бизнес"
+                    />
+                  </picture>
                 </div>
                 <div class="works__content">
                   <h3 class="works__title">Growing Business</h3>
@@ -424,5 +871,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="./assets/js/burger.js"></script>
   </body>
 </html>
